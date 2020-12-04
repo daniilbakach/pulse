@@ -2,6 +2,11 @@
     .container {
         max-width: 850px;
     }
+    .title {
+        &_left {
+            text-align: center;
+        }
+    }
 }
 
 @media (max-width:991px) {
@@ -11,6 +16,14 @@
     }
     .advantages__icons {
         flex-wrap: wrap;
+    }
+    .consultation__descr {
+        margin-top: 50px;
+    }
+    .carousel {
+        padding: 0;
+        margin: 81px auto;
+        width: 100%;
     }
 }
 
@@ -51,10 +64,18 @@
             margin-top: 21px;
         }
     }
-    .advantages {
-        &__title {
-            font-size: 33px;
-        }
+    .title {
+        font-size: 33px;
+    }
+    .feed-form {
+        width: 100%;
+        align-items: center;
+    }
+    .button_submit {
+        width: 300px;
+    }
+    .consultation__descr {
+        text-align: center;
     }
 }
 
@@ -72,6 +93,9 @@
         padding-bottom: 0px;
         &__icons {
             display: none;
+        }
+        &__link {
+            margin-bottom: 20px;
         }
     }
 }
