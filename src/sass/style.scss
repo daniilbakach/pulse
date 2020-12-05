@@ -7,11 +7,13 @@
 @import "blocks/titles.scss";
 @import "blocks/forms.scss";
 @import "blocks/carousel.scss";
+@import "blocks/_catalog.scss";
 * {
     font-family: "Museo Sans Cyrl", sans-serif;
 }
 
 .container {
+    position: relative;
     max-width: 950px;
     margin: 0 auto;
 }
