@@ -1,13 +1,3 @@
-@import "base/variables";
-@import "blocks/promo";
-@import "blocks/header";
-@import "blocks/buttons.scss";
-@import "blocks/advantages.scss";
-@import "blocks/consultation.scss";
-@import "blocks/titles.scss";
-@import "blocks/forms.scss";
-@import "blocks/carousel.scss";
-@import "blocks/_catalog.scss";
 * {
     font-family: "Museo Sans Cyrl", sans-serif;
 }
@@ -17,5 +7,19 @@
     max-width: 950px;
     margin: 0 auto;
 }
-
+@import "base/animations.scss";
 @import "base/media.scss";
+@import "base/variables";
+@import "blocks/promo";
+@import "blocks/header";
+@import "blocks/buttons.scss";
+@import "blocks/advantages.scss";
+@import "blocks/consultation.scss";
+@import "blocks/titles.scss";
+@import "blocks/forms.scss";
+@import "blocks/carousel.scss";
+@import "blocks/catalog.scss";
+@import "blocks/reviews.scss";
+@import "blocks/footer.scss";
+@import "blocks/modal.scss";
+@import "blocks/pageup.scss";

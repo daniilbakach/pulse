@@ -13,7 +13,11 @@
         img {
             display: block;
             margin: 0 auto;
+            
         }
+        
+            
+        
     }
     &__icon_title {
         margin-top: 38px;
@@ -31,6 +35,12 @@
         a {
             color: #ff0000;
             text-decoration: underline;
+        }
+    }
+    &__animated{
+        animation: heartbeat 2s ease infinite;
+        &:hover{
+            animation-play-state: paused;
         }
     }
 }

@@ -59,4 +59,88 @@ $(document).ready(function() {
     toggleSlide('.catalog-item__back');
 
 
+    //modal
+    $('[data-modal=consultation]').on('click', function() {
+        $('.overlay, #consultation').fadeIn('slow');
+    });
+    $('.modal__close').on('click', function() {
+        $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+    });
+    // $('.button_mini').on('click', function() {
+    //     $('.overlay, #order').fadeIn('slow');
+    // });
+    $('.button_mini').each(function(i) {
+        $(this).on('click', function() {
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn('slow');
+        });
+    });
+
+
+    //validate
+
+
+    function validateForms(form) {
+        $(form).validate({
+            rules: {
+                name: 'required',
+                phone: 'required',
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: "Пожалуйста, ввдите свое имя",
+                phone: "Пожалуйста, ввдите свой номер телефона",
+                email: {
+                    required: "Пожалуйста, ввдите свою почту",
+                    email: "Неправильно введен адрес почты"
+                }
+            }
+
+        });
+    }
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
+    validateForms('#order form');
+
+
+    //mask
+    $('input[name=phone]').mask("+375 (99) 999-9999");
+    $('form').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+
+        }).done(function() {
+            $(this).find("input").val("");
+            $('#consultation, #order').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
+    //scroll
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut();
+        }
+
+    });
+
+
+    $("a[href^='#up']").click(function() {
+        const _href = $(this).attr("href");
+        $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+        return false;
+    });
+    new WOW().init();
+
+
 });
