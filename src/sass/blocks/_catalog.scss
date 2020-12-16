@@ -133,7 +133,6 @@
             transition: 0.5s all;
             padding-left: 19px;
             margin-left: 0;
-            list-style-type: none;
             &_active {
                 transform: translateX(-100%);
                 margin-left: 0px;
@@ -153,6 +152,9 @@
                     top: 7px;
                     background-color: $main-color;
                 }
+            }
+            ul {
+                list-style-type: none;
             }
         }
         &__back {
