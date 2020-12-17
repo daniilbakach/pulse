@@ -1,5 +1,5 @@
 .footer {
-    height: 630px;
+    min-height: 620px;
     position: relative;
     &__info {
         position: absolute;
@@ -36,6 +36,11 @@
             width: 100%;
             height: 630px;
             border: none;
+            .gm-style {
+                .palce-card-large {
+                    display: none;
+                }
+            }
         }
     }
     &__social {

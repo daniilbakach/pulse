@@ -48,6 +48,28 @@
         img {
             display: block;
             margin: 0 auto;
+            // width: 400px;
+        }
+    }
+    .tns-nav {
+        text-align: center;
+        display: flex; // поставить кнопки в ряд
+        justify-content: center; // выровнять по центру
+        list-style: none; // убираем черные маркеры
+        padding: 0;
+        margin: 0 auto;
+        button {
+            // цвет фона
+            border: none; // без рамки
+            border-radius: 50%; // радиус закругления
+            height: 15px; // высота точки
+            width: 15px; // ширина точки
+            margin: 5px; // отступы между точками
+            outline: none; // убираем обводку
+            font-size: 0;
+        }
+        &-active {
+            background: $main-color;
         }
     }
 }

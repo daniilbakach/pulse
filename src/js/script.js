@@ -27,7 +27,22 @@ let slider = tns({
     slideBy: "page",
     autoplay: false,
     controls: false,
-    nav: false
+    nav: false,
+    autoplayButton: false,
+    mouseDrag: true,
+    navPosition: "bottom",
+    navItems: ".nav-item-unactive",
+    nav: true,
+    navAsThumbnails: true,
+    navPosition: "bottom",
+    responsive: {
+
+        767: {
+
+            nav: false
+
+        }
+    }
 });
 document.querySelector('.prev').addEventListener("click", function() {
     slider.goTo("prev");
